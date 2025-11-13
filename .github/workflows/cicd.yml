@@ -16,3 +16,4 @@ jobs:
         - name: List Files
           run: |
             echo "Hello world"
+            echo "Something"
