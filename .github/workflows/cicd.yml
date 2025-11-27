@@ -28,7 +28,7 @@ jobs:
 
     - name: Greet
       run: |
-        ec "Oliver Bajus"
+        echo "Oliver Bajus"
     - name: List Files again
       run: |
         ls
@@ -36,10 +36,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Python 3.9
         uses: actions/setup-python@v3
         with:
           python-version: 3.9
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pytest
+
       - name: Run pytests
         run: |
           pytest
