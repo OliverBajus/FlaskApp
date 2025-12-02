@@ -19,7 +19,7 @@ def home():
 @app.route('/pascal')
 def home():
     return render_template(
-        'index_pascal.html',
+        'pascal.html',
         title='Home Page by Pascal',
         year=datetime.now().year,
     )
