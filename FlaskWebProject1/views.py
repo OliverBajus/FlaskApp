@@ -16,6 +16,14 @@ def home():
         year=datetime.now().year,
     )
 
+@app.route('/pascal')
+def home():
+    return render_template(
+        'index_pascal.html',
+        title='Home Page by Pascal',
+        year=datetime.now().year,
+    )
+
 @app.route('/contact')
 def contact():
     return render_template(
