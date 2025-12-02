@@ -67,3 +67,13 @@ def cache_test():
         return f"Redis Connected - Visit Count: {count}"
     except Exception as e:
         return f"Redis {str(e)}"
+from FlaskWebProject1 import app
+from datetime import datetime
+from flask import render_template
+
+# EXISTING ROUTES...
+
+@app.route("/aakash")
+def aakash():
+    return "Hello from Aakash! 🚀 This endpoint was added for the final practical challenge."
+
